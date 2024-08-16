@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2</title>
+</head>
+
+<body>
+<div id= "par_coord_stimulus_timer"> </div>
+<div style="display:flex; flex-direction:row; justify-content: center;">
+<div id="par_coord_stimulus"></div>
+<div id="instructions">
+	<p>
+		This parallel coordinates plot presents a multivariate analysis of the classic Iris dataset, 
+		displaying four distinct axes corresponding to the features: sepal length, sepal width, petal length, and petal width. 
+		Each axis represents a different dimension of the data, scaled to accommodate the range of values for that given feature.
+	</p>
+	<p>
+		This plot allows us to discern the relative differences and similarities among the three Iris species across all four measured features. 
+		The plot is color-coded with blue, magenta, and orange lines, each representing one of the Iris species. The blue lines denote Iris setosa, the magenta lines represent Iris virginica, and the orange lines correspond to Iris versicolor. 
+	</p>
+</div>
+</div>
+
+<script> 
+(function() {
+  var data = {};
+  var answers = {};
+
+  init();
+  
+  function init(){
+
+	data.par_coord_stimulus = null;
+
+    //start timer
+  	experimentr.attachTimer('#par_coord_stimulus_timer', 120, function(){
+  	  if(experimentr.get_current() == 'modules/parallel_coordinates/stimulus.html'){ 
+    		experimentr.endTimer('par_coord_stimulus_timer');
+    		
+    		experimentr.addData(data);
+    		experimentr.next();
+    	}
+  	});
+    // d3.select('.class-wrapper').node().innerHTML = experimentr.condition() === 1 ? `<div>TESTINGGGG</div>` : `<object data="modules/task_1_crait/crait_vis.svg" width="auto" height="460"> </object>`;
+    if(experimentr.condition() === 1){
+      let vid = d3.select("#par_coord_stimulus").append('video');
+      vid.attr('controls', true);
+      vid.attr('width', '950px');
+      vid.attr('height', '400px');
+      let source = vid.append('source');
+      source.attr('src', 'modules/parallel_coordinates/parallel_coordinates.mp4');
+      
+      let caption = vid.append('track')
+      caption.attr('src', 'modules/parallel_coordinates/captions.vtt')
+      caption.attr('label', 'English')
+      caption.attr('kind', 'captions')
+      caption.attr('srclang', "en-us")
+      caption.attr('default', true)
+      
+      var track_elem = document.querySelector('track');
+
+      track_elem.addEventListener('loaded',initialize_test,false); // Bug in FF31 MAC: wrong event name
+      track_elem.addEventListener('load',initialize_test,false);
+
+      function initialize_test() {
+        var i, j, track, video = document.querySelector('video');
+        track = video.textTracks;
+        for (i=0; i<track.length; i++)
+          for (j=0; j<track[i].cues.length; j++)
+            track[i].cues[j].line = parseInt(document.querySelector('#input-change-line').value);
+        }
+
+        d3.select('#instructions').remove();
+
+    }else{
+   
+     // set the dimensions and margins of the graph
+     var margin = {top: 30, right: 10, bottom: 10, left: 0},
+      width = 900 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#par_coord_stimulus")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+    
+    // Parse the Data
+    d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/iris.csv", function(data) {
+    
+      // Extract the list of dimensions we want to keep in the plot. Here I keep all except the column called Species
+      dimensions = d3.keys(data[0]).filter(function(d) { return d != "Species" })
+    
+      // For each dimension, I build a linear scale. I store all in a y object
+      var y = {}
+      for (i in dimensions) {
+        name = dimensions[i]
+        y[name] = d3.scaleLinear()
+          .domain( d3.extent(data, function(d) { return +d[name]; }) )
+          .range([height, 0])
+      }
+    
+      // Build the X scale -> it find the best position for each Y axis
+      x = d3.scalePoint()
+        .range([0, width])
+        .padding(1)
+        .domain(dimensions);
+    
+      // The path function take a row of the csv as input, and return x and y coordinates of the line to draw for this raw.
+      function path(d) {
+          return d3.line()(dimensions.map(function(p) { return [x(p), y[p](d[p])]; }));
+      }
+      
+     let colorDict = {
+      setosa: "#648FFF", //blue
+      virginica: "#DC267F", //magenta
+      versicolor: "#FFB000" //orange
+      }
+      // Draw the lines
+      svg
+        .selectAll("myPath")
+        .data(data)
+        .enter().append("path")
+        .attr("d",  path)
+        .style("fill", "none")
+        .style("stroke", (d) => colorDict[d.Species])
+		.style("stroke-width", 1.5)
+		.style("opacity", 0.4)
+
+      // Draw the axis:
+      let axisG = svg.selectAll("myAxis")
+        // For each dimension of the dataset I add a 'g' element:
+        .data(dimensions).enter()
+        .append("g")
+
+        // I translate this element to its right position on the x axis
+        axisG.attr("transform", function(d) { return "translate(" + x(d) + ")"; })
+        // And I build the axis with the call function
+        .each(function(d) { d3.select(this).call(d3.axisLeft().scale(y[d])); })
+        // Add axis title
+        .append("text")
+          .style("text-anchor", "middle")
+          .attr("y", -9)
+          .text(function(d) { return d; })
+          .style("fill", "black")
+    
+    })
+
+    }
+
+  	//overrides onNext from experimentr
+    d3.select('#next-button')
+      .on('click', function(){
+		if(confirm("Are you sure you want to move on to the questions? \nYou won't be able to go back.")){
+			console.log('PRESSED YES');
+            experimentr.endTimer('bayes_grouped_stimulus_timer');
+            data.used_next = true;
+			experimentr.addData(data);
+        	experimentr.next();
+            
+		}
+        // experimentr.addData(data);
+        // experimentr.next();
+    });
+    
+    experimentr.startTimer('bayes_grouped_stimulus_timer');
+    experimentr.release();
+  }
+
+
+
+
+}());
+</script>
+</body>
+</html>

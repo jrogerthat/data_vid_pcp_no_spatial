@@ -1,0 +1,272 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.120 --> 00:00:02.790 align:start position:0%
+ 
+this<00:00:00.399><c> parallel</c><00:00:01.079><c> coordinates</c><00:00:01.920><c> plot</c><00:00:02.440><c> presents</c>
+
+00:00:02.790 --> 00:00:02.800 align:start position:0%
+this parallel coordinates plot presents
+ 
+
+00:00:02.800 --> 00:00:05.630 align:start position:0%
+this parallel coordinates plot presents
+a<00:00:03.040><c> multivariate</c><00:00:04.040><c> analysis</c><00:00:04.680><c> of</c><00:00:04.880><c> the</c><00:00:05.120><c> classic</c>
+
+00:00:05.630 --> 00:00:05.640 align:start position:0%
+a multivariate analysis of the classic
+ 
+
+00:00:05.640 --> 00:00:09.430 align:start position:0%
+a multivariate analysis of the classic
+Iris<00:00:06.200><c> data</c><00:00:06.799><c> set</c><00:00:07.799><c> the</c><00:00:08.080><c> data</c><00:00:08.440><c> set</c><00:00:08.760><c> has</c><00:00:09.000><c> four</c>
+
+00:00:09.430 --> 00:00:09.440 align:start position:0%
+Iris data set the data set has four
+ 
+
+00:00:09.440 --> 00:00:12.190 align:start position:0%
+Iris data set the data set has four
+numerical<00:00:10.240><c> variables</c><00:00:11.200><c> shown</c><00:00:11.559><c> as</c><00:00:11.799><c> four</c>
+
+00:00:12.190 --> 00:00:12.200 align:start position:0%
+numerical variables shown as four
+ 
+
+00:00:12.200 --> 00:00:16.470 align:start position:0%
+numerical variables shown as four
+distinct<00:00:12.799><c> axes</c><00:00:13.320><c> in</c><00:00:13.480><c> the</c><00:00:13.759><c> plot</c><00:00:14.759><c> SLE</c><00:00:15.280><c> length</c><00:00:16.000><c> SLE</c>
+
+00:00:16.470 --> 00:00:16.480 align:start position:0%
+distinct axes in the plot SLE length SLE
+ 
+
+00:00:16.480 --> 00:00:20.230 align:start position:0%
+distinct axes in the plot SLE length SLE
+width<00:00:17.199><c> pedal</c><00:00:17.600><c> length</c><00:00:18.160><c> and</c><00:00:18.400><c> pedal</c><00:00:19.039><c> width</c><00:00:20.039><c> a</c>
+
+00:00:20.230 --> 00:00:20.240 align:start position:0%
+width pedal length and pedal width a
+ 
+
+00:00:20.240 --> 00:00:23.349 align:start position:0%
+width pedal length and pedal width a
+single<00:00:20.800><c> polyline</c><00:00:21.760><c> represents</c><00:00:22.279><c> an</c><00:00:22.600><c> individual</c>
+
+00:00:23.349 --> 00:00:23.359 align:start position:0%
+single polyline represents an individual
+ 
+
+00:00:23.359 --> 00:00:26.750 align:start position:0%
+single polyline represents an individual
+data<00:00:23.800><c> point</c><00:00:24.240><c> across</c><00:00:24.640><c> multiple</c><00:00:25.560><c> variables</c><00:00:26.560><c> the</c>
+
+00:00:26.750 --> 00:00:26.760 align:start position:0%
+data point across multiple variables the
+ 
+
+00:00:26.760 --> 00:00:29.029 align:start position:0%
+data point across multiple variables the
+values<00:00:27.160><c> for</c><00:00:27.400><c> a</c><00:00:27.599><c> given</c><00:00:27.960><c> data</c><00:00:28.480><c> point</c><00:00:28.720><c> are</c>
+
+00:00:29.029 --> 00:00:29.039 align:start position:0%
+values for a given data point are
+ 
+
+00:00:29.039 --> 00:00:31.310 align:start position:0%
+values for a given data point are
+represented<00:00:29.720><c> as</c><00:00:30.039><c> the</c><00:00:30.199><c> intersection</c><00:00:30.920><c> of</c><00:00:31.080><c> the</c>
+
+00:00:31.310 --> 00:00:31.320 align:start position:0%
+represented as the intersection of the
+ 
+
+00:00:31.320 --> 00:00:35.270 align:start position:0%
+represented as the intersection of the
+polyline<00:00:32.040><c> at</c><00:00:32.239><c> each</c><00:00:33.040><c> axis</c><00:00:34.040><c> the</c><00:00:34.239><c> poly</c><00:00:34.680><c> lines</c><00:00:35.079><c> in</c>
+
+00:00:35.270 --> 00:00:35.280 align:start position:0%
+polyline at each axis the poly lines in
+ 
+
+00:00:35.280 --> 00:00:38.750 align:start position:0%
+polyline at each axis the poly lines in
+this<00:00:35.559><c> plot</c><00:00:35.879><c> are</c><00:00:36.160><c> colorcoded</c><00:00:37.000><c> by</c><00:00:37.239><c> three</c><00:00:37.600><c> Iris</c>
+
+00:00:38.750 --> 00:00:38.760 align:start position:0%
+this plot are colorcoded by three Iris
+ 
+
+00:00:38.760 --> 00:00:42.510 align:start position:0%
+this plot are colorcoded by three Iris
+species<00:00:39.760><c> the</c><00:00:39.920><c> blue</c><00:00:40.200><c> lines</c><00:00:40.559><c> for</c><00:00:40.840><c> Iris</c><00:00:41.520><c> setosa</c>
+
+00:00:42.510 --> 00:00:42.520 align:start position:0%
+species the blue lines for Iris setosa
+ 
+
+00:00:42.520 --> 00:00:45.630 align:start position:0%
+species the blue lines for Iris setosa
+the<00:00:42.640><c> magenta</c><00:00:43.280><c> lines</c><00:00:43.600><c> for</c><00:00:43.879><c> Iris</c><00:00:44.480><c> virginica</c><00:00:45.480><c> and</c>
+
+00:00:45.630 --> 00:00:45.640 align:start position:0%
+the magenta lines for Iris virginica and
+ 
+
+00:00:45.640 --> 00:00:48.229 align:start position:0%
+the magenta lines for Iris virginica and
+the<00:00:45.760><c> orange</c><00:00:46.239><c> lines</c><00:00:46.559><c> for</c><00:00:46.879><c> Iris</c>
+
+00:00:48.229 --> 00:00:48.239 align:start position:0%
+the orange lines for Iris
+ 
+
+00:00:48.239 --> 00:00:51.189 align:start position:0%
+the orange lines for Iris
+versacolor<00:00:49.239><c> parallel</c><00:00:49.920><c> coordinates</c><00:00:50.760><c> enable</c>
+
+00:00:51.189 --> 00:00:51.199 align:start position:0%
+versacolor parallel coordinates enable
+ 
+
+00:00:51.199 --> 00:00:53.750 align:start position:0%
+versacolor parallel coordinates enable
+us<00:00:51.399><c> to</c><00:00:51.640><c> explore</c><00:00:52.120><c> the</c><00:00:52.359><c> relative</c><00:00:52.960><c> differences</c>
+
+00:00:53.750 --> 00:00:53.760 align:start position:0%
+us to explore the relative differences
+ 
+
+00:00:53.760 --> 00:00:56.270 align:start position:0%
+us to explore the relative differences
+and<00:00:54.039><c> similarities</c><00:00:54.879><c> among</c><00:00:55.160><c> the</c><00:00:55.399><c> three</c><00:00:55.719><c> Iris</c>
+
+00:00:56.270 --> 00:00:56.280 align:start position:0%
+and similarities among the three Iris
+ 
+
+00:00:56.280 --> 00:00:58.790 align:start position:0%
+and similarities among the three Iris
+species<00:00:56.879><c> across</c><00:00:57.280><c> the</c><00:00:57.440><c> four</c><00:00:57.840><c> variables</c><00:00:58.440><c> in</c><00:00:58.600><c> the</c>
+
+00:00:58.790 --> 00:00:58.800 align:start position:0%
+species across the four variables in the
+ 
+
+00:00:58.800 --> 00:01:02.549 align:start position:0%
+species across the four variables in the
+data<00:00:59.239><c> set</c><00:01:00.399><c> in</c><00:01:00.640><c> addition</c><00:01:01.399><c> the</c><00:01:01.600><c> plot</c><00:01:01.960><c> reveals</c>
+
+00:01:02.549 --> 00:01:02.559 align:start position:0%
+data set in addition the plot reveals
+ 
+
+00:01:02.559 --> 00:01:04.750 align:start position:0%
+data set in addition the plot reveals
+relationships<00:01:03.480><c> between</c><00:01:03.840><c> the</c><00:01:04.080><c> variables</c>
+
+00:01:04.750 --> 00:01:04.760 align:start position:0%
+relationships between the variables
+ 
+
+00:01:04.760 --> 00:01:08.710 align:start position:0%
+relationships between the variables
+across<00:01:05.199><c> all</c><00:01:05.519><c> data</c><00:01:06.320><c> points</c><00:01:07.320><c> for</c><00:01:07.600><c> example</c><00:01:08.560><c> there</c>
+
+00:01:08.710 --> 00:01:08.720 align:start position:0%
+across all data points for example there
+ 
+
+00:01:08.720 --> 00:01:11.270 align:start position:0%
+across all data points for example there
+is<00:01:08.840><c> a</c><00:01:09.080><c> noticeable</c><00:01:09.840><c> negative</c><00:01:10.400><c> relationship</c>
+
+00:01:11.270 --> 00:01:11.280 align:start position:0%
+is a noticeable negative relationship
+ 
+
+00:01:11.280 --> 00:01:14.270 align:start position:0%
+is a noticeable negative relationship
+between<00:01:11.680><c> seple</c><00:01:12.200><c> length</c><00:01:12.560><c> and</c><00:01:12.720><c> seel</c><00:01:13.240><c> width</c><00:01:14.040><c> as</c>
+
+00:01:14.270 --> 00:01:14.280 align:start position:0%
+between seple length and seel width as
+ 
+
+00:01:14.280 --> 00:01:16.950 align:start position:0%
+between seple length and seel width as
+indicated<00:01:14.960><c> by</c><00:01:15.119><c> the</c><00:01:15.320><c> intersecting</c><00:01:16.159><c> x</c><00:01:16.600><c> pattern</c>
+
+00:01:16.950 --> 00:01:16.960 align:start position:0%
+indicated by the intersecting x pattern
+ 
+
+00:01:16.960 --> 00:01:17.830 align:start position:0%
+indicated by the intersecting x pattern
+of<00:01:17.119><c> the</c>
+
+00:01:17.830 --> 00:01:17.840 align:start position:0%
+of the
+ 
+
+00:01:17.840 --> 00:01:20.990 align:start position:0%
+of the
+lines<00:01:18.840><c> this</c><00:01:19.159><c> pattern</c><00:01:19.600><c> shows</c><00:01:20.040><c> that</c><00:01:20.240><c> when</c><00:01:20.479><c> SLE</c>
+
+00:01:20.990 --> 00:01:21.000 align:start position:0%
+lines this pattern shows that when SLE
+ 
+
+00:01:21.000 --> 00:01:24.789 align:start position:0%
+lines this pattern shows that when SLE
+length<00:01:21.479><c> increases</c><00:01:22.479><c> seel</c><00:01:23.000><c> width</c><00:01:23.520><c> generally</c>
+
+00:01:24.789 --> 00:01:24.799 align:start position:0%
+length increases seel width generally
+ 
+
+00:01:24.799 --> 00:01:28.109 align:start position:0%
+length increases seel width generally
+decreases<00:01:25.799><c> in</c><00:01:26.159><c> contrast</c><00:01:27.159><c> pedal</c><00:01:27.560><c> length</c><00:01:27.880><c> and</c>
+
+00:01:28.109 --> 00:01:28.119 align:start position:0%
+decreases in contrast pedal length and
+ 
+
+00:01:28.119 --> 00:01:30.510 align:start position:0%
+decreases in contrast pedal length and
+pedal<00:01:28.520><c> width</c><00:01:29.000><c> demonstrate</c><00:01:29.560><c> a</c><00:01:30.000><c> positive</c>
+
+00:01:30.510 --> 00:01:30.520 align:start position:0%
+pedal width demonstrate a positive
+ 
+
+00:01:30.520 --> 00:01:32.310 align:start position:0%
+pedal width demonstrate a positive
+relationship<00:01:31.280><c> through</c><00:01:31.520><c> the</c><00:01:31.759><c> parallel</c>
+
+00:01:32.310 --> 00:01:32.320 align:start position:0%
+relationship through the parallel
+ 
+
+00:01:32.320 --> 00:01:34.910 align:start position:0%
+relationship through the parallel
+arrangement<00:01:32.880><c> of</c><00:01:33.040><c> the</c><00:01:33.240><c> lines</c><00:01:34.119><c> meaning</c><00:01:34.479><c> that</c><00:01:34.680><c> as</c>
+
+00:01:34.910 --> 00:01:34.920 align:start position:0%
+arrangement of the lines meaning that as
+ 
+
+00:01:34.920 --> 00:01:37.870 align:start position:0%
+arrangement of the lines meaning that as
+one<00:01:35.280><c> variable</c><00:01:36.119><c> increases</c><00:01:37.119><c> the</c><00:01:37.240><c> other</c><00:01:37.520><c> tends</c>
+
+00:01:37.870 --> 00:01:37.880 align:start position:0%
+one variable increases the other tends
+ 
+
+00:01:37.880 --> 00:01:41.799 align:start position:0%
+one variable increases the other tends
+to<00:01:38.079><c> increase</c><00:01:38.600><c> as</c><00:01:38.799><c> well</c>
+

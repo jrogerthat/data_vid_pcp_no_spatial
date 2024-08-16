@@ -1,0 +1,47 @@
+<div id="gate">
+    <h2>Are you familiar with parallel coordinates?</h2>
+    
+    <div id="familiar">
+        <div><input type="radio" id="e1" name="familiar" value="No">No</div>
+        <div><input type="radio" id="e2" name="familiar" value="Yes">Yes</div>
+    </div>
+    </div>
+    
+    <style>
+      #gate {
+        width: 70%;
+        margin: auto;
+      }
+      #familiar{
+        display:flex;
+        flex-direction: column;
+        font-size: large;
+        font-weight: 400;
+        
+      }
+      #familiar div{
+        padding:10px;
+      }
+    </style>
+    <script> 
+    (function() {
+        d3.selectAll('input')
+        .filter(function(d) { return this.name === 'familiar' ? this : null; })
+        .on('change', function() { 
+            console.log(this.value);
+            if(this.value === "No"){
+                experimentr.release();
+            }else{
+                experimentr.hideNext();
+                
+                d3.select('#gate').selectAll('*').remove();
+                document.getElementById('gate').innerHTML = "<h2>Sorry, you are not eligable for this test. Please return to Prolific.</h2>"
+            }
+            
+           
+         });
+    
+      
+    }());
+    </script>
+    
