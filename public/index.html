@@ -26,18 +26,13 @@ if(experimentr.didRefresh()){
       h1.text("You have refreshed the page and are disqualified. Please return to Prolific.")
 }else{
    experimentr.sequence([
-    'modules/parallel_coordinates_may_run_v2/gate_check.html',
+    'modules/parallel_coordinates/gate_check.html',
     'modules/consent/',
     'modules/audio_check/',
     'modules/demographics/',
-    'modules/parallel_coordinates_may_run_v2/instructions_task.html',
-    'modules/parallel_coordinates_may_run_v2/stimulus.html',
-    'modules/parallel_coordinates_may_run_v2/questions.html',
-    // 'modules/bayes/stimulus.html',
-    // 'modules/bayes/questions.html',
-    // 'modules/parallel_coordinates/instructions_task.html',
-    // 'modules/parallel_coordinates/stimulus.html',
-    // 'modules/parallel_coordinates/questions.html',
+    'modules/parallel_coordinates/instructions_task.html',
+    'modules/parallel_coordinates/stimulus.html',
+    'modules/parallel_coordinates/questions.html',
     'modules/engagement/',
     'modules/nasa-tlx/',
     'modules/spatial/instructions-spatial.html',

@@ -1,6 +1,6 @@
 <?php
 // Path to the video file
-$path = "modules/parallel_coordinates_may_run_v2/output2.mp4"; // Adjust the path to your video file accordingly
+$path = "modules/parallel_coordinates/parallel_coord_no_spatial_8_20.mp4"; // Adjust the path to your video file accordingly
 
 // Ensure the file exists to avoid errors
 if (!file_exists($path)) {

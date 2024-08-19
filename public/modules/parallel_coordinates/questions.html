@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iris Task Questions</title>
+</head>
+
+<body>
+  <div id="task_iris_questions_timer"></div>
+  <div id="task_iris_questions">
+    <h5> <span id="status"></span> </h5>
+    <div id="stim"></div>
+    <!-- <h3 id="task_iris_question_header">Please answer the questions to the best of your ability: </h3> -->
+    <br>
+    
+     <div>
+      <form>
+        <label for="task_iris_q1">1. What is the relationship between the values for Sepal Length and Petal Length?</label>
+        <input type="text" id="task_iris_q1" name="task_iris_q1"><br>
+        <br>
+        <label for="task_iris_q2">2. What is the relationship between the values for Sepal Width and Petal Length?</label>
+        <input type="text" id="task_iris_q2" name="task_iris_q2"><br>
+        <br>
+        <label for="task_iris_q3">3. For any iris flower to have a high sepal length, do they typically have a high, mid, low Petal Width?</label>
+        <input type="text" id="task_iris_q3" name="task_iris_q3"><br>
+        <br>
+        <label for="task_iris_q4">4. Reading the plot, if an Iris Setosa flower has a .4 Petal Width, what is the highest possible Sepal Length the flower could have?</label>
+        <input type="text" id="task_iris_q4" name="task_iris_q4"><br>
+        <br>
+        <label for="task_iris_q5">5. Which attribute shows the densest clustering of lines, indicating high similarity in measurements within a species?</label>
+        <input type="text" id="task_iris_q5" name="task_iris_q5"><br>
+        <br>
+        <label for="task_iris_q6">6. Which species of Iris, if any, shows an outlier? Describe what makes it an outlier.</label>
+        <input type="text" id="task_iris_q6" name="task_iris_q6"><br>
+      </form>
+      </div>
+      </div>
+    </div>
+</div>
+
+<style>
+    ul {
+    list-style-type: none;
+    }
+    #task_2_questions{
+      width: 70%;
+      margin: auto;
+    }
+
+    .leg{
+      font-size: 10px;
+    }
+   input {min-width: 200px;}
+</style>
+
+<script>
+(function() {
+  let ob = d3.select('#stim').append('object');
+  ob.attr('data', "modules/parallel_coordinates/parallel_coord_no_spatial_reference.svg"); 
+  ob.attr('width', 'auto');
+  ob.attr('height', '300px');
+
+  var data = {};
+
+  experimentr.startTimer('task_iris_questions_timer');
+  experimentr.startTimer('task_iris_q1_timer');
+  experimentr.startTimer('task_iris_q2_timer');
+  experimentr.startTimer('task_iris_q3_timer');
+  experimentr.startTimer('task_iris_q4_timer');
+  experimentr.startTimer('task_iris_q5_timer');
+  experimentr.startTimer('task_iris_q6_timer');
+  //d3.select('#status').text(experimentr.status());
+
+  // experimentr.release();
+
+  d3.selectAll('input')
+  .filter(function(d) { return this.name === 'task_iris_q1' ? this : null; })
+  .on('change', function() { data.task_iris_q1 = this.value; experimentr.endTimer('task_iris_q1_timer');  validate(); });
+
+  d3.selectAll('input')
+  .filter(function(d) { return this.name === 'task_iris_q2' ? this : null; })
+  .on('change', function() { data.task_iris_q2 = this.value; experimentr.endTimer('task_iris_q2_timer'); validate(); });
+
+  d3.selectAll('input')
+  .filter(function(d) { return this.name === 'task_iris_q3' ? this : null; })
+  .on('change', function() { data.task_iris_q3 = this.value; experimentr.endTimer('task_iris_q3_timer'); validate(); });
+
+  d3.selectAll('input')
+  .filter(function(d) { return this.name === 'task_iris_q4' ? this : null; })
+  .on('change', function() { data.task_iris_q4 = this.value; experimentr.endTimer('task_iris_q4_timer'); validate(); });
+
+  d3.selectAll('input')
+  .filter(function(d) { return this.name === 'task_iris_q5' ? this : null; })
+  .on('change', function() { data.task_iris_q5 = this.value; experimentr.endTimer('task_iris_q5_timer'); validate(); });
+
+  d3.selectAll('input')
+  .filter(function(d) { return this.name === 'task_iris_q6' ? this : null; })
+  .on('change', function() { data.task_iris_q6 = this.value; experimentr.endTimer('task_iris_q6_timer'); validate(); });
+
+  function validate() {
+    if(data.task_iris_q1 && data.task_iris_q2 &&
+    data.task_iris_q3 && data.task_iris_q4 && data.task_iris_q5 &&
+      data.task_iris_q6) {
+
+        // experimentr.endTimer('task_2_questions_timer');
+        // experimentr.addData(data);
+        // experimentr.release();
+    }
+  }
+
+  experimentr.release();
+      	//overrides onNext from experimentr
+    d3.select('#next-button')
+      .on('click', function(){
+        if(data.task_iris_q1 && data.task_iris_q2 && data.task_iris_q3 && data.task_iris_q4 && data.task_iris_q5 && data.task_iris_q6){
+          
+          experimentr.endTimer('task_iris_questions_timer');
+          experimentr.addData(data);
+          experimentr.next();
+
+        }else{
+          let keeper = []
+          if(!data.task_iris_q1) keeper.push('question 1')
+          if(!data.task_iris_q2) keeper.push('question 2')
+          if(!data.task_iris_q3) keeper.push('question 3')
+          if(!data.task_iris_q4) keeper.push('question 4')
+          if(!data.task_iris_q5) keeper.push('question 5')
+          if(!data.task_iris_q6) keeper.push('question 6')
+          window.alert(`You still need to fill in: ${keeper.join(', ')}`)
+        }
+    });
+}());
+</script>
+
+</body>
+</html>
